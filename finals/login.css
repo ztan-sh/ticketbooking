@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-color: #0d1117; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  color: #e6e6e6;
+}
+
+h1 {
+  color: #58a6ff;          
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+form {
+  background: #161b22;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 360px;
+  border: 1px solid #1f2937;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #c9d1d9;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  background-color: #0d1117;
+  color: #f0f6fc;
+  font-size: 1rem;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+input:focus {
+  border-color: #58a6ff;
+  outline: none;
+  background-color: #161b22;
+}
+
+
+button[type="submit"] {
+  display: block;
+  width: 70%;              
+  margin: 1.5rem auto 0;
+  padding: 0.9rem;
+  background-color: #1f6feb; 
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+  background-color: #1158c7; 
+  transform: scale(1.05);
+}
+
+
+.login-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #c9d1d9;
+}
+
+.login-text a {
+    color: #58a6ff;
+    text-decoration: none;
+    margin-left: 0.2rem;
+    transition: color 0.2s;
+}
+
+.login-text a:hover {
+    color: #79c0ff;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 400px) {
+  form {
+    padding: 1.5rem;
+  }
+
+  button[type="submit"] {
+    width: 90%; 
+  }
+}
+a {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #58a6ff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  word-wrap: break-word;
+}
+a:hover {
+  color: #79c0ff;
+  text-decoration: underline;
+}
+.login-text {
+    text-align: center; 
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #c9d1d9;
+}
+
+.login-text a {
+    color: #58a6ff;
+    text-decoration: none;
+    margin-left: 0.2rem;
+    transition: color 0.2s;
+}
+
+.login-text a:hover {
+    color: #79c0ff;
+    text-decoration: underline;
+}
+p {
+  margin-top: 1rem;
+  text-align: center;
+  color: #c9d1d9; 
+  font-size: 0.9rem;
+}

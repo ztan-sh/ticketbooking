@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concert Ticket Booking</title>
+  <style>
+    /* ===========================================
+       GLOBAL STYLES
+       =========================================== */
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #0b0c10;
+      color: #eaeaea;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00aaff;
+      font-size: 2.2em;
+      font-weight: 700;
+      text-shadow: 0 0 15px rgba(0, 170, 255, 0.6);
+      margin-bottom: 35px;
+      letter-spacing: 1px;
+    }
+
+    form {
+      max-width: 520px;
+      margin: auto;
+      background-color: #101820;
+      padding: 35px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0, 170, 255, 0.1);
+      transition: 0.3s ease-in-out;
+    }
+
+    form:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 25px rgba(0, 170, 255, 0.25);
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-top: 15px;
+      margin-bottom: 6px;
+      color: #aad8ff;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #1f3b4d;
+      outline: none;
+      background-color: #16222a;
+      color: #fff;
+      font-size: 15px;
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #00aaff;
+      box-shadow: 0 0 6px #00aaff;
+      background-color: #1a2b38;
+    }
+
+    p {
+      margin-top: 20px;
+      font-weight: 600;
+      color: #00aaff;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 8px;
+      accent-color: #00aaff;
+      cursor: pointer;
+    }
+
+    /* ===========================================
+       BUTTON STYLES
+       =========================================== */
+    .btn-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
+
+    .btn-row button,
+    .btn-row a {
+      flex: 1;
+      padding: 14px 0;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .submit-btn {
+      background-color: #0077cc;
+      color: #fff;
+      border: 1px solid #00aaff;
+    }
+
+    .submit-btn:hover {
+      background-color: #0099ff;
+      box-shadow: 0 0 15px rgba(0, 153, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    .saved-btn {
+      background-color: #16222a;
+      color: #00ff99;
+      border: 1px solid #00ff99;
+    }
+
+    .saved-btn:hover {
+      background-color: #00ff99;
+      color: #0b0c10;
+      box-shadow: 0 0 15px rgba(0, 255, 153, 0.4);
+      transform: scale(1.05);
+    }
+
+    .exit-btn {
+      display: block;
+      width: 100%;
+      background-color: #d33;
+      color: #fff;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      margin-top: 20px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .exit-btn:hover {
+      background-color: #b02a2a;
+      transform: scale(1.03);
+      box-shadow: 0 0 12px rgba(211, 51, 51, 0.4);
+    }
+
+    @media (max-width: 600px) {
+      .btn-row {
+        flex-direction: column;
+      }
+      .btn-row button,
+      .btn-row a {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎵 Book Your Concert Ticket</h1>
+
+  <form action="booking.php" method="post">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="concert">Select Concert and Price:</label>
+    <select id="concert" name="concert" required>
+      <option value="">--Select--</option>
+      <option value="bini">BINI Live Concert - ₱3000</option>
+      <option value="coldplay">Coldplay Live Concert - ₱2000</option>
+      <option value="eminem">Eminem Live Concert - ₱3500</option>
+      <option value="parokya">Parokya Ni Edgar Live Concert - ₱800</option>
+      <option value="maroon5">Maroon 5 Live Concert - ₱2000</option>
+      <option value="adele">Adele Live Concert - ₱1500</option>
+      <option value="taylor">Taylor Swift Live Concert - ₱4500</option>
+    </select>
+
+    <label for="concertDate">Select Date:</label>
+    <input type="date" id="concertDate" name="concertDate" required>
+
+    <label for="tickets">Number of Tickets:</label>
+    <input type="number" id="tickets" name="tickets" min="1" max="100" required>
+
+    <p>Seat Type:</p>
+    <label><input type="radio" name="seatType" value="VIP" required> VIP</label>
+    <label><input type="radio" name="seatType" value="Regular" required> Regular</label>
+
+    <p>Extras:</p>
+    <label><input type="checkbox" name="extras[]" value="Parking"> Parking</label>
+    <label><input type="checkbox" name="extras[]" value="Merchandise"> Merchandise</label>
+
+    <!-- Book & View Saved Row -->
+    <div class="btn-row">
+      <button type="submit" class="submit-btn"> Book Now</button>
+      <a href="saved.php" class="saved-btn"> View Saved</a>
+    </div>
+
+    <!-- Exit Below -->
+    <a href="login.html" class="exit-btn"> Exit</a>
+  </form>
+</body>
+</html>

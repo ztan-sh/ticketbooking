@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="signin.css"> 
+</head>
+<body>
+    <h1>Register</h1>
+    <form action="signin.php" method="post">
+
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="pass" required>
+        <br>
+        <label for="conpass">Confirm Password:</label>
+        <input type="password" id="conpass" name="conpass" required>
+        <br>
+        <a href="login.html"></a><button type="submit">Sign In</button>
+        <br>
+        <p>Already have an account?</p><a href="login.html">Log in here.</a>
+    </form>
+</body>
+</html>
