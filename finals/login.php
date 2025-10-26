@@ -17,7 +17,7 @@ $result = mysqli_query($conn,$sql);
 
 if(mysqli_num_rows($result) > 0){
 
-    header("Location: homepage.html");
+    header("Location: booking.html");
     exit();
 
 }else{
